@@ -1,0 +1,6 @@
+# DSA and core CS
+
+Computer science and software engineering fundamentals necessary for engineering roles, including algorithmic problem patterns, core data structures, database querying with SQL, and modular object-oriented programming.
+
+## Pages
+- [[AI/ML engineer interview preparation]]
