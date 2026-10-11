@@ -1,0 +1,205 @@
+{
+  "main": {
+    "id": "4191bab1112822e7",
+    "type": "split",
+    "children": [
+      {
+        "id": "81146213e374a8da",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b5b4044bab6cb5b6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "topics.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "topics"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "38a2219b09e6f19f",
+    "type": "split",
+    "children": [
+      {
+        "id": "86e175aafc9a8e95",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "615fea3e4205df83",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "deb57fd1f0c7022f",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "neet",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "9eb3a5472f166a65",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "44bf1e6558f1369e",
+    "type": "split",
+    "children": [
+      {
+        "id": "e154543293a19be1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b73d146d733cb477",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "topics.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "9c7c746a1d87eb2b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "topics.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "4d555473faf5c12d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "e5e2265d3b9211c3",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "68363395aeb92345",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "topics.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "b5b4044bab6cb5b6",
+  "lastOpenFiles": [
+    "interview-scenarios/ai-ml-engineer-interview-preparation.md",
+    "topics.md",
+    "lint_report.md",
+    "AI engineer interview questions curriculum and challenges.md",
+    "interview-scenarios/ai-engineer-interview-questions-curriculum-and-challenges.md",
+    "groups/dsa-and-core-cs.md",
+    "AI/ML engineer interview preparation.md",
+    "groups/data-science-core.md",
+    "AI",
+    "index.md"
+  ]
+}

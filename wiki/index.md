@@ -10,3 +10,4 @@
 
 ## Interview scenarios
 - [[AI/ML engineer interview preparation]]
+- [[AI engineer interview questions curriculum and challenges]]

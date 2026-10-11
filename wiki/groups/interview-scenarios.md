@@ -4,3 +4,4 @@ Comprehensive preparation roadmaps, mock frameworks, production system design me
 
 ## Pages
 - [[AI/ML engineer interview preparation]]
+- [[AI engineer interview questions curriculum and challenges]]

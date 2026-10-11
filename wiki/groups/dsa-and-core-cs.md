@@ -4,3 +4,4 @@ Computer science and software engineering fundamentals necessary for engineering
 
 ## Pages
 - [[AI/ML engineer interview preparation]]
+- [[AI engineer interview questions curriculum and challenges]]

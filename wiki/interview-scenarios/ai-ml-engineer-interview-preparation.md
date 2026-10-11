@@ -35,6 +35,7 @@ Behavioral rounds evaluate communication, resilience, and ethical problem solvin
 - **Domain-specific challenges**: Be prepared to discuss model degradation, data drift, biased training distributions, pipeline outages, and translating technical tradeoffs to non-technical stakeholders.
 
 ## Related
+- [[AI engineer interview questions curriculum and challenges]]
 - [[Data science core]]
 - [[DSA and core CS]]
 - [[Interview scenarios]]

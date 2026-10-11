@@ -4,3 +4,4 @@ Core machine learning and data science fundamentals covering neural network arch
 
 ## Pages
 - [[AI/ML engineer interview preparation]]
+- [[AI engineer interview questions curriculum and challenges]]
