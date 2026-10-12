@@ -14,20 +14,28 @@ The repository serves two distinct purposes:
 .
 ├── AGENTS.md                  # Autonomous Wiki Agent specification & persistent config
 ├── README.md                  # This file
+├── Makefile                   # Developer shortcuts (build, serve, test, docker)
+├── Dockerfile                 # Multi-stage container build (Quartz builder -> Nginx runtime)
+├── docker-compose.yml         # Containerized dev & production preview services
 ├── input/                     # Source documents & ingested web archives (non-destructive)
 │   ├── AI_ML_Engineer_Interview_Preparation.md
 │   └── ai_engineer_interview_questions_ombharatiya.md
-└── wiki/                      # Generated Markdown knowledge base
-    ├── index.md               # Global root catalog
-    ├── topics.md              # Normalized taxonomy of canonical terms & aliases
-    ├── lint_report.md         # Structural & hyperlink integrity report
-    ├── groups/                # Category rollup pages
-    │   ├── data-science-core.md
-    │   ├── dsa-and-core-cs.md
-    │   └── interview-scenarios.md
-    └── interview-scenarios/   # Synthesized technical guides
-        ├── ai-ml-engineer-interview-preparation.md
-        └── ai-engineer-interview-questions-curriculum-and-challenges.md
+├── wiki/                      # Generated Markdown knowledge base (Source of truth)
+│   ├── index.md               # Global root catalog
+│   ├── topics.md              # Normalized taxonomy of canonical terms & aliases
+│   ├── lint_report.md         # Structural & hyperlink integrity report
+│   ├── groups/                # Category rollup pages
+│   │   ├── data-science-core.md
+│   │   ├── dsa-and-core-cs.md
+│   │   └── interview-scenarios.md
+│   └── interview-scenarios/   # Synthesized technical guides
+│       ├── ai-ml-engineer-interview-preparation.md
+│       └── ai-engineer-interview-questions-curriculum-and-challenges.md
+├── quartz/                    # Quartz v5 static site generator engine
+│   ├── quartz.config.yaml     # Site metadata, plugins & Obsidian shortest link settings
+│   └── package.json           # Quartz dependencies & CLI runners
+└── tests/                     # Automated link integrity & 404 validation suite
+    └── test_site_integrity.py
 ```
 
 ---
@@ -142,6 +150,83 @@ Prompt the agent:
    - Re-indexes [wiki/index.md](wiki/index.md) and updates existing related pages.
 4. **Validation (Stages 7 & 8)**:
    - Re-runs link analysis to ensure zero broken links and zero orphan pages, logging the result to [wiki/lint_report.md](wiki/lint_report.md).
+
+---
+
+## Part 4: Browsing and Publishing as Static HTML (Quartz)
+
+The wiki can be rendered into a fully interactive, browsable static website using **Quartz v5**. This enables:
+- **Native Obsidian `[[wikilinks]]`**: Shortest-path link resolution across nested entity folders without altering source files.
+- **Interactive Knowledge Graph**: Force-directed network graph showing connections across AI/ML topics, DSA patterns, and system design case studies.
+- **Page Hover Previews**: Instant popover previews when hovering over any concept link.
+- **Fast Full-Text Search**: Client-side instant search (`Ctrl+K`).
+- **Dark & Light Mode**: Theme toggle with syntax highlighting and reader mode.
+
+---
+
+### Option A: Local Host Development (Native)
+
+**Prerequisites:** Node.js &ge; 22 and npm.
+
+1. **Initialize Submodule & Install Dependencies**:
+   ```bash
+   # If cloning fresh:
+   # git clone --recurse-submodules <repo-url>
+
+   # In this repository:
+   make install
+   ```
+   `make install` automatically initializes the `quartz` Git submodule (`git submodule update --init --recursive`), syncs `quartz.config.yaml`, and installs npm packages.
+
+2. **Start Development Server (Live Reload)**:
+   ```bash
+   make serve
+   # or: cd quartz && npm run serve
+   ```
+   Open `http://localhost:8080` in your browser. Any edits made in `wiki/` will automatically hot-reload in the browser.
+
+3. **Build Static Bundle**:
+   ```bash
+   make build
+   # or: cd quartz && npm run build
+   ```
+   The compiled HTML, CSS, JavaScript, and search indexes are output to `quartz/public/`.
+
+4. **Run Automated Integrity Tests**:
+   ```bash
+   make test
+   ```
+   Executes `tests/test_site_integrity.py` (zero external Python dependencies) to verify:
+   - All core entrypoints (`index.html`, `topics.html`, `404.html`, `contentIndex.json`) exist.
+   - Zero raw unparsed `[[...]]` wikilinks leak into the rendered HTML text.
+   - Every internal link resolves to a valid HTML destination (zero 404s).
+   - Search index and metadata are complete.
+
+---
+
+### Option B: Docker-First Workflow
+
+If you prefer to run Quartz entirely inside containers without managing Node.js dependencies on the host:
+
+1. **Development Server with Hot Reload**:
+   ```bash
+   make docker-dev
+   # or: docker compose up --build wiki-dev
+   ```
+   Mounts `./wiki` as read-only and `./quartz` with hot reloading at `http://localhost:8080`.
+
+2. **Production Preview via Nginx**:
+   ```bash
+   make docker-preview
+   # or: docker compose up --build wiki-preview
+   ```
+   Runs a multi-stage build that compiles static HTML via Quartz and serves it through a lightweight, optimized Nginx container at `http://localhost:8081`.
+
+3. **Stop Docker Services**:
+   ```bash
+   make docker-down
+   # or: docker compose down
+   ```
 
 ---
 

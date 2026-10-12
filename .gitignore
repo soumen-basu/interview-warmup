@@ -1,0 +1,24 @@
+# Node / Quartz Build Artifacts
+quartz/node_modules/
+quartz/public/
+quartz/.quartz-cache/
+quartz/.quartz/
+quartz/tsconfig.tsbuildinfo
+quartz/.turbo/
+node_modules/
+public/
+
+# Python / Testing
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.venv/
+venv/
+
+# OS / Editor Artifacts
+.DS_Store
+*.swp
+*~
+.idea/
+.vscode/

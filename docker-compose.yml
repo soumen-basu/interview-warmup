@@ -1,0 +1,28 @@
+services:
+  wiki-dev:
+    image: node:22-slim
+    container_name: interview-prep-wiki-dev
+    working_dir: /app/quartz
+    volumes:
+      - ./quartz:/app/quartz
+      - /app/quartz/node_modules
+      - ./quartz.config.yaml:/app/quartz/quartz.config.yaml:ro
+      - ./wiki:/app/wiki:ro
+    ports:
+      - "8080:8080"
+      - "3001:3001"
+    environment:
+      - NODE_ENV=development
+    command: >
+      sh -c "npm install && npm run quartz -- build --serve -d /app/wiki --port 8080 --wsPort 3001"
+    restart: unless-stopped
+
+  wiki-preview:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: preview
+    container_name: interview-prep-wiki-preview
+    ports:
+      - "8081:80"
+    restart: unless-stopped
