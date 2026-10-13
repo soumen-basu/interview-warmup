@@ -4,6 +4,10 @@
 Aliases: Machine Learning System Design Interview
 Pages: [[AI/ML engineer interview preparation]]
 
+## Anagram grouping
+Aliases: Group anagrams, Anagram clustering, Character count hashing
+Pages: [[Group anagrams]], [[DSA and core CS]]
+
 ## Attention mechanisms
 Aliases: Multi-head attention, Scaled dot-product attention, Causal masking
 Pages: [[AI/ML engineer interview preparation]], [[AI engineer interview questions curriculum and challenges]]
@@ -22,15 +26,23 @@ Pages: [[AI engineer interview questions curriculum and challenges]]
 
 ## Data structures and algorithms
 Aliases: DSA, Algorithmic patterns
-Pages: [[AI/ML engineer interview preparation]], [[AI engineer interview questions curriculum and challenges]]
+Pages: [[AI/ML engineer interview preparation]], [[AI engineer interview questions curriculum and challenges]], [[Contains duplicate]], [[Group anagrams]]
+
+## Duplicate detection
+Aliases: Contains duplicate, Duplicate integers, Set lookup
+Pages: [[Contains duplicate]], [[DSA and core CS]]
 
 ## Evaluation and observability
 Aliases: Eval metrics, LLM-as-a-judge, pass@k, Tracing pipelines
 Pages: [[AI engineer interview questions curriculum and challenges]]
 
+## Frequency mapping
+Aliases: Character frequency map, Frequency counter, Character count array
+Pages: [[Contains duplicate]], [[Group anagrams]], [[DSA and core CS]]
+
 ## From-scratch implementations
 Aliases: Algorithm implementations from scratch, Baseline ML models, Runnable coding challenges
-Pages: [[AI/ML engineer interview preparation]], [[AI engineer interview questions curriculum and challenges]]
+Pages: [[AI/ML engineer interview preparation]], [[AI engineer interview questions curriculum and challenges]], [[Contains duplicate]], [[Group anagrams]]
 
 ## Hybrid search and reranking
 Aliases: Hybrid search, Reciprocal Rank Fusion, RRF, Cross-encoder rerankers, BM25
@@ -58,7 +70,7 @@ Pages: [[AI/ML engineer interview preparation]], [[AI engineer interview questio
 
 ## NeetCode 150
 Aliases: NeetCode roadmap, LeetCode patterns
-Pages: [[AI/ML engineer interview preparation]]
+Pages: [[AI/ML engineer interview preparation]], [[Contains duplicate]], [[Group anagrams]]
 
 ## Object-oriented programming
 Aliases: OOP, Modular Python
